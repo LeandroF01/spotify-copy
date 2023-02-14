@@ -1,7 +1,12 @@
-import "./App.css";
+import { ModalLeft } from "./components/modal-left/ModalLeft";
+import "./css/style.css";
 
 function App() {
-  return <div className="App"></div>;
+  return (
+    <header className="App">
+      <ModalLeft />
+    </header>
+  );
 }
 
 export default App;
