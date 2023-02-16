@@ -1,32 +1,190 @@
-body {
-  margin: 0%;
-  font-family: "", sans-serif;
-  font-size: 15px;
-}
-
-ul {
-  list-style-type: none;
-}
-
-.App {
-  width: 100%;
-  height: 100%;
-  background: #121212;
-  color: #a2a2a2;
-}
-
+@charset "UTF-8";
 .modal-left {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   height: 100vh;
   width: 20em;
-  background: #000000;
+  background: var(--black-modal);
 }
 
 .icon-spotify {
   width: 8.1em;
   margin: 1em auto;
-  color: #ffffff;
+  color: var(--white);
 }
 
-/*# sourceMappingURL=style.css.map */
+:root {
+  --black-modal: #000000;
+  --grey-text: #a2a2a2;
+  --black-grey-header: #121212;
+  --white: #ffffff;
+  --tip-principal: "Helvetica Neue", "helvetica", "arial",
+    "Hiragino Kaku Gothic Pro", "Meiryo", "MS Gothic";
+}
+
+/* Definimos las Custom properties */
+/* Colores */
+/* Tipografía */
+/* (Opcional) Las adaptamos al modo oscuro */
+/* (Opcional) Configuramos si un usuario ha activado el modo alto contraste. (WD) */
+/* (Opcional) Desactivamos los animations en el caso de que el usuario haya configurado el modo sin animation */
+@media (prefers-reduced-motion: reduce) {
+  body {
+    -webkit-animation: none;
+            animation: none;
+    -webkit-transition: none;
+    transition: none;
+  }
+}
+/* Reseteamos los margin y paddings de todas las etiquetas */
+body,
+body::before,
+body::after {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  vertical-align: baseline;
+}
+
+body::before,
+body::after {
+  display: block;
+}
+
+/* Evitamos problemas con las imagenes */
+img,
+picture,
+video,
+iframe,
+figure {
+  max-width: 100%;
+  width: 100%;
+  display: block;
+  /* (Opcional) */
+  /* (Opcional) */
+}
+
+/* Reseteamos los enlaces para funcionar como cajas... */
+a {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  font-size: inherit;
+}
+
+/* ... excepto los que se encuentran en párrafos */
+p a {
+  display: inline;
+}
+
+/* Quitamos los puntos de los <li> */
+li {
+  list-style-type: none;
+}
+
+/* (Opcional) Configuramos anclas suaves */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Desactivamos estilos por defecto de las principales etiquetas de texto */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+span,
+a,
+strong,
+blockquote,
+i,
+b,
+u,
+em {
+  font-size: inherit;
+  font-weight: inherit;
+  font-style: inherit;
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Evitamos problemas con los pseudoelementos de quotes */
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+/* (Opcional) Configuramos el texto que seleccionamos */
+::-moz-selection {
+  background-color: var(--negro);
+  color: var(--blanco);
+}
+::selection {
+  background-color: var(--negro);
+  color: var(--blanco);
+}
+
+/* Nivelamos problemas de tipografías y colocación de formularios */
+form,
+input,
+textarea,
+select,
+button,
+label {
+  font-family: inherit;
+  font-size: inherit;
+  -webkit-hyphens: auto;
+      -ms-hyphens: auto;
+          hyphens: auto;
+  background-color: transparent;
+  color: inherit;
+  display: block;
+  /* (Opcional) */
+}
+
+/* Reseteamos las tablas */
+table,
+tr,
+td {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* Evitamos problemas con los SVG */
+svg {
+  width: 100%;
+  display: block;
+  fill: currentColor;
+}
+
+/* Configuramos la tipografía para toda la web */
+body {
+  min-height: 100vh;
+  font-size: 100%;
+  font-family: var(--tipo-principal);
+  color: var(--negro);
+  /* (Opcional) */
+  /* (Opcional) */
+  /* (Opcional) */
+  /* (Opcional) */
+}
+
+.App {
+  width: 100%;
+  height: 100%;
+  background: var(--black-grey-header);
+  color: var(--grey-text);
+  font-family: var(--tip-principal);
+}
