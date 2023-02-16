@@ -1,0 +1,33 @@
+.modal-left {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 20em;
+  background: var(--black-modal);
+}
+.icon-spotify {
+  width: 8.1em;
+  margin: 1em auto;
+  color: var(--white);
+}
+.menu {
+  &__container {
+  }
+  &__main {
+  }
+}
+.playlist {
+  &__create {
+  }
+  &__create-btn {
+  }
+  &__list {
+  }
+}
+
+.like {
+  &__list {
+  }
+  &__list-btn {
+  }
+}
