@@ -10,32 +10,32 @@ export const ModalLeft = () => {
     <section className="modal-left">
       <SpotifySvg />
       <section className="menu">
-        <ul className="container-menu">
-          <li className="main-menu">
+        <ul className="menu__container">
+          <li className="menu__main">
             <HomeSvg />
             Home
           </li>
-          <li className="main-menu">
+          <li className="menu__main">
             <SearchSvg />
             Search
           </li>
-          <li className="main-menu">
+          <li className="menu__main">
             <LibrarySvg /> Your Library
           </li>
         </ul>
       </section>
       <section className="playlist">
-        <ul className="playlist-list">
-          <li className="create-playlist">
-            <button className="create-playlist_btn">
+        <ul className="playlist__list">
+          <li className="playlist__create">
+            <button className="playlist__create-btn">
               <PlusSvg />
             </button>
             Create Playlist
           </li>
         </ul>
         <ul className="like">
-          <li className="like-list">
-            <button className="like-list_btn">
+          <li className="like__list">
+            <button className="like__list-btn">
               <LikeSvg />
             </button>
             I Like You
